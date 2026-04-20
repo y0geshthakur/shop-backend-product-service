@@ -3,6 +3,7 @@
 !lambda/**/*.js
 *.d.ts
 node_modules
+lambda/product-service/dist
 
 # CDK asset staging directory
 .cdk.staging

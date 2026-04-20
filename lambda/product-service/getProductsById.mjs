@@ -1,7 +1,7 @@
-const { products } = require("./data/products");
-const { createResponse } = require("./utils/response");
+import { products } from "./data/products.mjs";
+import { createResponse } from "./utils/response.mjs";
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
   const productId = event.pathParameters?.productId;
   const product = products.find((item) => item.id === productId);
 

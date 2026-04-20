@@ -10,7 +10,7 @@ export class ShopBackendProductServiceStack extends cdk.Stack {
 
     const productServiceLambdaAssetPath = path.join(
       __dirname,
-      "../lambda/product-service",
+      "../lambda/product-service/dist",
     );
 
     const getProductsList = new lambda.Function(this, "GetProductsListLambda", {

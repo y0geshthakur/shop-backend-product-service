@@ -1,4 +1,4 @@
-function createResponse(statusCode, body) {
+export function createResponse(statusCode, body) {
   return {
     statusCode,
     headers: {
@@ -9,7 +9,3 @@ function createResponse(statusCode, body) {
     body: JSON.stringify(body),
   };
 }
-
-module.exports = {
-  createResponse,
-};
