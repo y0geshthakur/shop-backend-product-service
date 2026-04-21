@@ -1,14 +1,23 @@
-# Welcome to your CDK TypeScript project
+# Product Service (Backend)
 
-This is a blank project for CDK development with TypeScript.
+Product Service for the shop application built with AWS CDK, API Gateway, and Lambda.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Live Links
 
-## Useful commands
+| Resource                  | URL                                                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Frontend (CloudFront)     | https://d1w0cu0me25lu9.cloudfront.net                                                                    |
+| Product Service API Base  | https://f6012m8ype.execute-api.us-east-1.amazonaws.com/dev                                               |
+| GET /products             | https://f6012m8ype.execute-api.us-east-1.amazonaws.com/dev/products                                      |
+| GET /products/{productId} | https://f6012m8ype.execute-api.us-east-1.amazonaws.com/dev/products/7567ec4b-b10c-48c5-9345-fc73c48a80aa |
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+## API Documentation
+
+- OpenAPI file: [openapi.yaml](openapi.yaml)
+
+## Useful Commands
+
+- `npm run bundle:product-service` build Lambda artifacts with manual esbuild config
+- `npm run build` compile TypeScript CDK sources
+- `npm run test` run Jest tests for handlers and stack
+- `npm run cdk -- deploy --require-approval never` deploy infrastructure
